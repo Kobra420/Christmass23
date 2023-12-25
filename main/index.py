@@ -49,7 +49,7 @@ def draw_star():
 def draw_santa():
     # Draw Santa's face
     turtle.penup()
-    turtle.goto(-60, -60)  # Adjusted coordinates for a centered face
+    turtle.goto(170, -150)  # Adjusted coordinates for a centered face
     turtle.pendown()
     turtle.color("red")
     turtle.begin_fill()
@@ -58,7 +58,7 @@ def draw_santa():
 
     # Draw Santa's eyes
     turtle.penup()
-    turtle.goto(-50, -50)
+    turtle.goto(150, -165)
     turtle.pendown()
     turtle.color("black")
     turtle.begin_fill()
@@ -66,7 +66,7 @@ def draw_santa():
     turtle.end_fill()
 
     turtle.penup()
-    turtle.goto(20, 20)
+    turtle.goto(188, -165)
     turtle.pendown()
     turtle.begin_fill()
     turtle.circle(10)  # Adjusted the radius of the eyes
@@ -74,20 +74,27 @@ def draw_santa():
 
     # Draw Santa's nose
     turtle.penup()
-    turtle.goto(0, 0)  # Adjusted the nose position
+    turtle.goto(169, -209)
+    # Adjusted the nose position
+    turtle.right(270)
     turtle.pendown()
     turtle.color("orange")
     turtle.begin_fill()
-    turtle.circle(7)  # Adjusted the radius of the nose
+    for _ in range(6):
+        turtle.forward(30)
+        turtle.left(120)
+        turtle.forward(5)
+        turtle.left(120)
+    turtle.forward(30)  # Adjusted the radius of the nose
     turtle.end_fill()
 
     # Draw Santa's mouth
     turtle.penup()
-    turtle.goto(-15, -15)
+    turtle.goto(190, -165)
     turtle.pendown()
     turtle.color("black")
     turtle.width(5)
-    turtle.right(90)
+    turtle.right(360)
     turtle.circle(15, 180)  # Draw a semi-circle for the mouth
     turtle.width(1)
 
@@ -99,7 +106,7 @@ def play_music():
 
 # Main function
 def main():
-    turtle.speed(15)
+    turtle.speed(1)
     turtle.hideturtle()
     
     draw_tree()
